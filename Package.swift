@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "DIM",
-    platforms: [.iOS(.v13), .tvOS(.v13), .watchOS(.v7), .macOS(.v10_15)],
+    platforms: [.iOS(.v13), .tvOS(.v13), .watchOS(.v7), .macOS(.v12)],
     products: [
         .library(
             name: "DIM",
