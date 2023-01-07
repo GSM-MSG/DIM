@@ -14,6 +14,20 @@ public final class DIMContainer {
         register(injection: injection())
     }
 
+    public init(@DIMContainerBuilder _ container: () -> DIMContainer) {
+        container().injected.forEach {
+            register(injection: $0.value)
+        }
+    }
+
+    public init (@DIMContainerBuilder _ containers: () -> [DIMContainer]) {
+        containers().forEach {
+            $0.injected.forEach {
+                register(injection: $0.value)
+            }
+        }
+    }
+
     deinit { injected.removeAll() }
 
     static func resolve<T>(for name: String? = nil) -> T {
