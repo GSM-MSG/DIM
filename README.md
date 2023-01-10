@@ -38,7 +38,7 @@ To integrate `DIM` into your Xcode project using Swift Package Manager, add it t
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/GSM-MSG/DIM.git", .upToNextMajor(from: "1.0.1"))
+    .package(url: "https://github.com/GSM-MSG/DIM.git", .upToNextMajor(from: "1.1.0"))
 ]
 ```
 
